@@ -50,6 +50,11 @@ bower
 nginx（可选项，因为你可以直接npm start，不需要使用nginx做容器）
 ideaj:ideaIC-14.0.1.tar.gz
 
+下载代码
+git clone http://gc.chinacloudapp.cn:8089/{yourname}/studio_portal.git
+注意，这里的url必须是你自己fork的代码库的url哦
+
+
 运行初始化脚本
 # install package，参考http://bower.io/
 bower init

@@ -1,0 +1,5 @@
+
+
+define([
+    './bz/myDirective',
+], function () {});

@@ -1,86 +1,98 @@
+欢迎来到开发测试云的前台平台哈
 
-系统设计草稿
+有任何问题，或在讨论，请在http://gc.chinacloudapp.cn/projects/zycloud/issues提出
+以下是主干开发过程中的设想/知识整理/开发指南，希望对你了解系统有用
 
 
-1.=======================功能特性=======================
+=======================如何贡献代码=======================
+首先了解系统，知道大概是做什么的，不清楚业务的可以在http://gc.chinacloudapp.cn/projects/zycloud查询相关信息，或在找负责人题问
 
+然后fork一份代码下来，尝试运行代码，参考《环境搭建》
+
+接着寻找系统不足之处，或在思考可以增强的功能模块，（最好发邮件到（未定的邮件列表地址），大家讨论认同该功能后），开始修改代码实现功能
+
+最后，提交merge request~
+
+
+=======================功能特性=======================
+系统首页
+系统登陆
+个人中心
+创建项目
+申请服务
+创建场景
+后台配置管理
+
+草稿：
 查询控件=》https://www.digitalocean.com/community
 socket.io,跨域问题
 
 
-2.=======================非功能性特性=======================
+=======================非功能性特性=======================
 
 在线人数
 每个控件都是可以移除的，最后剩下骨骼代码
-每份页面都可以有多份moban
+每份页面都可以有多份模板
 渐变的工作区域
 https
-用户头像的显示
+用户头像的显示，支持自动生成的
 
 
-3.=======================wiki篇=======================
 
 
-————————————————————————环境搭建————————————————————————
-如果你不是linux开发环境，可能比较悲哀了，因为我是在centos7下玩的
+
+=======================环境搭建=======================
+注意：如果你不是linux开发环境，可能比较悲哀了，因为我是在centos7下玩的哦
+
 首先安装
 nodejs v0.10.33，参考http://nodejs.org/
 bower
-nginx
+nginx（可选项，因为你可以直接npm start，不需要使用nginx做容器）
 ideaj:ideaIC-14.0.1.tar.gz
 
-init script:
-
-install package，参考http://bower.io/
+运行初始化脚本
+# install package，参考http://bower.io/
 bower init
-bower install jquery --save
-bower install angular --save
+#bower install jquery --save
+#bower install angular --save
 
 
-add building system: gulp
-参考
-http://www.smashingmagazine.com/2014/06/11/building-with-gulp/
-http://slides.com/contra/gulp#/1
+#add building system: gulp
+#http://www.smashingmagazine.com/2014/06/11/building-with-gulp/
+#http://slides.com/contra/gulp#/1
 
-npm install -g gulp
-npm install --save-dev gulp
-npm install --save-dev gulp-uglify
-npm install --save-dev gulp-jshint
-npm install --save-dev gulp-concat
-npm install --save-dev gulp-del
-npm install --save-dev gulp-imagemin
-npm install --save-dev gulp-sourcemaps
-npm install --save-dev gulp-coffee
+npm install
+#npm install -g gulp
+#npm install --save-dev gulp
+#npm install --save-dev gulp-uglify
+#npm install --save-dev gulp-jshint
+#npm install --save-dev gulp-concat
+#npm install --save-dev gulp-del
+#npm install --save-dev gulp-imagemin
+#npm install --save-dev gulp-sourcemaps
+#npm install --save-dev gulp-coffee
 
-好吧，现在开始打开idea进行编辑把
+启动程序
+npm start
+浏览： http://localhost:8000/app
 
+#测试项目（未完成）
+npm test
+npm run update-webdriver
+npm run protractor
 
-————————————————————————开发指南————————————————————————
+#构建项目（开发人员可以不用了解）
+gulp
 
-
-npm包管理https://www.npmjs.org/doc/cli/npm-install.html
+=======================开发指南=======================
+npm包管理
+https://www.npmjs.org/doc/cli/npm-install.html
 常用的几个有用的命令
 npm install ***
 npm install *** --save
 npm install -g *** 
 
-邮件列表指南!!!
-
-
-
-#int project
-npm install
-
-#start project
-npm start
-http://localhost:8000/app/index.html
-
-#test project
-npm test
-npm run update-webdriver
-npm run protractor
-
-
+邮件列表指南(没空搭建)
 
 nginx安装指南(如果喜欢用nginx作静态服务器的同学可以用)
 sudo rpm -Uvh http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm
@@ -108,16 +120,34 @@ sudo setenforce Enforcing
 
 set user as root
 
-开源模式指南
+=======================新手指南FAQ=======================
+为什么需要bower？
+这是一个js包管理神器，以后爸爸妈妈再也不担心我找不到js包了，想要jquery？直接bower install jquery即可～
+这个比较简单就提供学习指导了
 
-————————————————————————新手指南————————————————————————
-为什么需要anglar
+为什么需要requriejs？
+你必须了解AMD规范，说白了就是解决js依赖问题的，我们要告诉系统要按照某种顺序加载js，貌似也对性能也有一定帮助，忽略～
 
-为什么需要requriejs
+requriejs学习指南
 http://briantford.com/blog/huuuuuge-angular-apps
 http://www.startersquad.com/blog/angularjs-requirejs/
 Write small, focused, modular parts, and progressively combine them into bigger things to make your app
 
+
+为什么要用bootstrap？
+这是一个很好的页面表现框架，有了他，爸爸妈妈再也不用担心我写的页面在手机上或在其他平台上看到的效果相差甚远～
+http://getbootstrap.com/css/
+
+为什么需要angular？
+这是一个纯粹的前台框架，我们用他组织html，一方面解决访问路由，一方面让页面可拆分为一片片可组装的代码片段
+其他功能麻，不是非常重要～
+
+请求如何路由的？
+https://github.com/angular-ui/ui-router（快速介紹了下）
+https://github.com/angular-ui/ui-router/wiki(更詳細內容)
+https://github.com/angular-ui/ui-router/wiki/Quick-Reference
+http://bubkoo.com/2014/01/02/angular/ui-router/guide/index/(中文版)
+http://angular-ui.github.io/ui-router/site/#/api/ui.router(看object結構的)
 
 angularJS学习指南
 https://docs.angularjs.org/tutorial
@@ -125,19 +155,27 @@ https://docs.angularjs.org/api
 https://docs.angularjs.org/guide
 
 
-state的route
-https://github.com/angular-ui/ui-router（快速介紹了下）
-https://github.com/angular-ui/ui-router/wiki(更詳細內容)
-https://github.com/angular-ui/ui-router/wiki/Quick-Reference
-http://bubkoo.com/2014/01/02/angular/ui-router/guide/index/(中文版)
-http://angular-ui.github.io/ui-router/site/#/api/ui.router(看object結構的)
+为什么需要gulp？
+这是一个构建工具，发布程序的时候要用到，他能压缩js/图片，还会检查js书写有没有问题等，其实我比较喜欢开发的时候也用～
+使用简单，概念也很好
+http://gulpjs.com/
 
 
 
-4。=======================每日轨迹=======================
+
+
+=======================漂亮的报表=======================
+http://bl.ocks.org/mbostock/1093025
+可以摺疊的清單列表
+
+http://bl.ocks.org/mbostock/1021841
+數據劃分
+
+
+=======================主干开发每日轨迹=======================
 9.8
 今早在前海湾站等地铁，等了10多趟地铁才上去了
-今天打算搭建开发环境，并弄一个首页/登陆/查询的页面骨骼（后者没作）
+今天打算搭建开发环境，并弄一个首页/登陆/查询的页面骨骼（后者没做）
 
 9.9
 今天打算深入学习下angular
@@ -163,16 +201,4 @@ https://github.com/notifications：通知分类
 9.13
 想找一个设计工具，另外把文档梳理下，如果时间充足，就找一个好看点的图表，d3js,你有我要的东西吗～
 
-=========================
-公司网站建设
-myCarousel
-
-
-
-http://bl.ocks.org/mbostock/1093025
-可以摺疊的清單列表
-
-
-http://bl.ocks.org/mbostock/1021841
-數據劃分
 

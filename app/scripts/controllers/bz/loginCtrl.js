@@ -16,6 +16,8 @@ define(['../module'], function (controllers) {
             $scope.login.working = true;
             $scope.login.wrong = false;
 
+            //console.log("let's login");
+            //console.log($scope.login);
             authService.login(
                 $scope.login,
                 function(user) {

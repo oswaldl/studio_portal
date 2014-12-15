@@ -48,6 +48,11 @@
 <!-- let the fun begins :) -->
 <div ui-view></div>
 
+<div class="jumbotron loading-jumbo" ng-show="doingResolve" style="position: fixed;top: 15%;left: 30.6%; background: none !important;">
+    <h2><!--<i class="fa fa-repeat fa-2x text-warning fa-spin"></i>-->
+        <img src="images/ajax-loader.gif" alt=""/></h2>
+</div>
+
 <script src="bower_components/requirejs/require.js" data-main="scripts/main.js"></script>
 
 </body>

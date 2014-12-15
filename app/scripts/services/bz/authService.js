@@ -39,20 +39,29 @@ define(['services/module'],
                     }).error(error);
                 },
                 login: function(user, success, error, fina) {
-                    ipCookie.remove('user');
-                    user = {};
-                    user.userName="os";
-                    user.roles="admin";
-                    changeUser(user);
-                    ipCookie('user',{'userName':user.userName,'roles':user.roles},{ expires: 21 });
-                    success(user);
-                },
+                    $http.post('/login', user).success(
+
+                        function(user){
+                            ipCookie.remove('user');
+                            changeUser(user);
+                            //console.log(user);
+                            ipCookie('user',{'userName':user.userName,'roles':user.roles},{ expires: 21 });
+                            success(user);
+                        })
+                        .error(error)
+                        .finally(fina);
+                    },
                 logoutUser: function (success,error) {
-                    changeUser({
-                       'userName':''
-                    });
-                    ipCookie.remove('user');
-                    success();
+                    $http.post('/logout','').success(
+                       function(){
+                           changeUser({
+                               'userName':''
+                           });
+                           ipCookie.remove('user');
+                           success();
+                       }
+                    )
+                    .error(error);
                 },
                 isInRole: function(role) {
                     if (!currentUser.roles) return false;

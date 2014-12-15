@@ -130,10 +130,10 @@ set user as root
 这是一个js包管理神器，以后爸爸妈妈再也不担心我找不到js包了，想要jquery？直接bower install jquery即可～
 这个比较简单就提供学习指导了
 
-为什么需要requriejs？
+为什么需要requirejs？
 你必须了解AMD规范，说白了就是解决js依赖问题的，我们要告诉系统要按照某种顺序加载js，貌似也对性能也有一定帮助，忽略～
 
-requriejs学习指南
+requirejs学习指南
 http://briantford.com/blog/huuuuuge-angular-apps
 http://www.startersquad.com/blog/angularjs-requirejs/
 Write small, focused, modular parts, and progressively combine them into bigger things to make your app

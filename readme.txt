@@ -206,4 +206,17 @@ https://github.com/notifications：通知分类
 9.13
 想找一个设计工具，另外把文档梳理下，如果时间充足，就找一个好看点的图表，d3js,你有我要的东西吗～
 
+9.15
+mock，make some http request
+http://southdesign.de/blog/mock-angular-js-modules-for-test-di.html
+Mocking $http with $httpBackend
+Mocking socket.io
+Mocking a Service
+
+公司网络好慢，千万别尝试上传，即使100K，也要传20分钟
+厕所附近抽烟的人好多，从厕所飘到办公室
+
+
+
+
 

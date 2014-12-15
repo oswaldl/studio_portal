@@ -1,7 +1,7 @@
 
-console.log('------------');
 define([
-    './bz/mainCtrl',
+    './bz/navCtrl',
+    './bz/wsCtrl',
+    './bz/headerCtrl',
+    './bz/loginCtrl',
 ], function () {});
-
-console.log('------------');

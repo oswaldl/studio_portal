@@ -24,6 +24,10 @@ require.config({
         'r.jquery': '../bower_components/jquery/dist/jquery.min',
         'r.angularUiBootstrap': '../bower_components/angular-bootstrap/ui-bootstrap',
         'r.angularUiRouter': '../bower_components/angular-ui-router/release/angular-ui-router',
+        'r.angularCookie': '../bower_components/angular-cookie/angular-cookie',
+        'r.angularMock': '../bower_components/angular-mocks/angular-mocks',
+        'd3': '../bower_components/d3.github.com/d3.v3.min',
+
     },
 
     // angular does not support AMD out of the box, put it in a shim
@@ -38,6 +42,16 @@ require.config({
         'r.angularUiRouter':{
             deps: ['r.angular']
         },
+        'r.angularCookie':{
+            deps: ['r.angular']
+        },
+        'r.angularMock':{
+            deps: ['r.angular']
+        },
+
+//        'r.d3':{
+//            exports: 'd3'
+//        },
     },
 
     // kick start application

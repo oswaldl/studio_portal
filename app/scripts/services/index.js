@@ -1,5 +1,5 @@
 
 
 define([
-    './bz/myService',
+    './bz/authService',
 ], function () {});

@@ -1,9 +1,7 @@
 define(['./app'], function (app) {
     'use strict';
-    console.log("=================");
     return app.config(['$stateProvider','$urlRouterProvider', function ($stateProvider,$urlRouterProvider) {
           $urlRouterProvider.otherwise('/');
-          console.log("=================");
           //commone state
           $stateProvider
               .state('public', {
@@ -11,13 +9,19 @@ define(['./app'], function (app) {
                   data: {
                       roles: ['public']
                   },
-                  templateUrl: "views/version1.0.html"
+                  templateUrl: "views/bone3/version1.0.html"
               })
-              .state('public.404', {
-                  url: '/404/',
+              .state('public.index', {
+                  url: '/',
                   views:{
+                      "nav": {
+                          templateUrl: 'views/public/nav.html',
+                      },
+                      "big-banner": {
+                          templateUrl: 'views/public/big-banner.html',
+                      },
                       "body": {
-                          templateUrl: 'views/404.html'
+                          templateUrl: 'views/public/body.html'
                       },
                       "footer":{
                           templateUrl: 'views/footer.html'
@@ -42,13 +46,16 @@ define(['./app'], function (app) {
                   data: {
                       roles: ['public']
                   },
-                  templateUrl: "views/version1.0.html"
+                  templateUrl: "views/bone2/version1.0.html"
               })
               .state('anon.login', {
                   url: '/login/',
                   views:{
+                      "nav": {
+                          templateUrl: 'views/nav.html',
+                      },
                       "body": {
-                          templateUrl: 'views/login.html',
+                          templateUrl: 'views/login/login.html',
                           controller: 'loginCtrl'
                       },
                       "footer":{
@@ -60,7 +67,7 @@ define(['./app'], function (app) {
                   url: '/register/',
                   views: {
                       "body": {
-                          templateUrl: 'views/register.html',
+                          templateUrl: 'views/login/regist.html',
                           controller: 'registerCtrl'
                       },
                       "footer":{
@@ -85,8 +92,16 @@ define(['./app'], function (app) {
         //          ,controller: 'headerCtrl'
               })
               .state('site.ws', {
-                  url: '/',
+                  url: '/studio',
                   views: {
+                      "nav": {
+                          templateUrl: 'views/nav.html',
+                          controller: 'navCtrl'
+                      },
+                      "header": {
+                          templateUrl: 'views/workspace/data_report.html',
+                          controller: 'headerCtrl'
+                      },
                       "body": {
                           templateUrl: 'views/workspace/body.html',
                           controller: 'wsCtrl'
@@ -107,6 +122,5 @@ define(['./app'], function (app) {
               })
               ;//end one stateProvider
 
-    console.log("=================");
     }]);//end define function return
 });//end define

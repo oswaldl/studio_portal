@@ -24,6 +24,8 @@ define([
     './services/index',
     'r.angularCookie',
     'r.angularMock',
+    'r.d3',
+    'r.angularToaster',
 ], function (ng) {
     'use strict';
 
@@ -33,6 +35,7 @@ define([
         'app.controllers',
         'ipCookie',
         'ngMockE2E',
+        'toaster',
 //        'app.filters',
 //        'app.directives'
     ]).run(['$rootScope', function ($rootScope) {
@@ -57,5 +60,5 @@ define([
           $rootScope.$on('$stateChangeError', resolveDone);
           $rootScope.$on('$statePermissionError', resolveDone);
 
-        }]);
+    }]);
 });

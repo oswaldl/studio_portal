@@ -26,8 +26,9 @@ require.config({
         'r.angularUiRouter': '../bower_components/angular-ui-router/release/angular-ui-router',
         'r.angularCookie': '../bower_components/angular-cookie/angular-cookie',
         'r.angularMock': '../bower_components/angular-mocks/angular-mocks',
-        'd3': '../bower_components/d3.github.com/d3.v3.min',
-
+        'r.d3': '../bower_components/d3.github.com/d3.v3.min',
+        'r.angularAnimate': '../bower_components/angular-animate/angular-animate',
+        'r.angularToaster': '../bower_components/AngularJS-Toaster/toaster',
     },
 
     // angular does not support AMD out of the box, put it in a shim
@@ -47,6 +48,12 @@ require.config({
         },
         'r.angularMock':{
             deps: ['r.angular']
+        },
+        'r.angularAnimate':{
+            deps: ['r.angular']
+        },
+        'r.angularToaster':{
+            deps: ['r.angular','r.angularAnimate']
         },
 
 //        'r.d3':{

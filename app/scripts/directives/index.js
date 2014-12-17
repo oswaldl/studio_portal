@@ -1,5 +1,5 @@
 
 
 define([
-    './bz/myDirective',
+    './bz/barChartDirective',
 ], function () {});

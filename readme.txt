@@ -177,54 +177,6 @@ http://bl.ocks.org/mbostock/1021841
 數據劃分
 
 
-=======================主干开发每日轨迹=======================
-9.8
-今早在前海湾站等地铁，等了10多趟地铁才上去了
-今天打算搭建开发环境，并弄一个首页/登陆/查询的页面骨骼（后者没做）
-
-9.9
-今天打算深入学习下angular
-再做骨骼代码
-https://www.humhub.org/ ：社交网站
-https://elasticbox.com/
-https://elasticbox.com/how-it-works/
-http://www.surrealcms.com/：很简洁的页面
-http://sae.sina.com.cn/：iframe和tab的结合
-https://sendgrid.com/：菜单比较有特色。。
-http://seanhalpin.io/：使用指南，比较Q
-https://github.com/notifications：通知分类
-
-9.10
-耽误了一天，今天还是继续昨天的计划，angular！
-
-9.11
-加入requirejs，并初步划分页面
-
-9.12
-开始设计零散的具有共用性的部件，因为可以随意组装了,恩，重点是一个服务的展现，有图有文字
-
-9.13
-想找一个设计工具，另外把文档梳理下，如果时间充足，就找一个好看点的图表，d3js,你有我要的东西吗～
-
-9.15
-mock，make some http request
-http://southdesign.de/blog/mock-angular-js-modules-for-test-di.html
-Mocking $http with $httpBackend
-Mocking socket.io
-Mocking a Service
-
-公司网络好慢，千万别尝试上传，即使100K，也要传20分钟
-厕所附近抽烟的人好多，从厕所飘到办公室
-
-9.16
-微调之前的功能
-另外开始着手内容的规划
-尝试了一下d3js + angular，但是被打断了
-
-9.17
-今天的事情估计都会用在培训，交流上面
-do some deploying
-日志迁移到redmine上
 
 
 

@@ -98,22 +98,54 @@ define(['./app'], function (app) {
                           templateUrl: 'views/nav.html',
                           controller: 'navCtrl'
                       },
-                      "header": {
-                          templateUrl: 'views/workspace/data_report.html',
-                          controller: 'headerCtrl'
-                      },
+//                      //d3数据分析图
+//                      "header": {
+//                          templateUrl: 'views/workspace/data_report.html',
+//                          controller: 'headerCtrl'
+//                      },
                       "body": {
                           templateUrl: 'views/workspace/body.html',
                           controller: 'wsCtrl'
                       },
+                      //body里面的动态
                       "activities@site.ws":{
                          templateUrl: 'views/workspace/activities.html'
                       },
+                      //body里面的项目列表
                       "projects@site.ws":{
                          templateUrl: 'views/workspace/projects.html'
                       },
-                      "sidebar":{
-                          templateUrl: 'views/workspace/sidebar.html'
+                      "left":{
+                          templateUrl: 'views/workspace/left.html'
+                       },
+                      "footer":{
+                          templateUrl: 'views/footer.html'
+                      }
+                  }
+              })
+              .state('site.project', {
+                  url: '/project',
+                  views: {
+                      "nav": {
+                          templateUrl: 'views/nav.html',
+                          controller: 'navCtrl'
+                      },
+                      "body": {
+                          templateUrl: 'views/project/body.html',
+                          controller: 'projectCtrl'
+                      },
+                      "crumbs@site.project":{
+                         templateUrl: 'views/project/crumbs.html'
+                      },
+                      "members@site.project":{
+                         templateUrl: 'views/project/members.html'
+                      },
+                      "content@site.project":{
+                         templateUrl: 'views/project/content.html'
+                      },
+                      "left":{
+                          templateUrl: 'views/project/left.html',
+                          controller: 'leftCtrl'
                        },
                       "footer":{
                           templateUrl: 'views/footer.html'

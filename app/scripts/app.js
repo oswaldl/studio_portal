@@ -26,6 +26,7 @@ define([
     'r.angularMock',
     'r.d3',
     'r.angularToaster',
+    'r.angularUiBootstrap',
 ], function (ng) {
     'use strict';
 
@@ -36,7 +37,7 @@ define([
         'ipCookie',
         'ngMockE2E',
         'toaster',
-//        'app.filters',
+        'ui.bootstrap',
 //        'app.directives'
     ]).run(['$rootScope', function ($rootScope) {
 

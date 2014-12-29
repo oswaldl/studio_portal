@@ -1,0 +1,36 @@
+
+<div class="btn-group" role="group" aria-label="...">
+    <div class="btn-group" dropdown is-open="status.isopen">
+        <button type="button" class="btn btn-primary dropdown-toggle" dropdown-toggle>
+            开发模式 <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+            <li><a href="#">敏捷视图</a></li>
+
+            <li class="divider"></li>
+            <li><a href="#">开发视图</a></li>
+            <li><a href="#">测试视图</a></li>
+            <li><a href="#">构建视图</a></li>
+        </ul>
+    </div>
+    <button type="button" class="btn btn-default" ng-click="addReq()">添加需求</button>
+    <button type="button" class="btn btn-default">添加构建</button>
+    <button type="button" class="btn btn-default">设置迭代</button>
+</div>
+
+
+<div linear-chart chart-data="scrumData" class="line-space"></div>
+<div shine-svg>
+</div>
+
+<!--<svg id="demo-link-1"  ng-class="divclass" width="84" height="40" xmlns="http://www.w3.org/2000/svg">-->
+    <!--<path class="darker" d="m 7.5228307,2.6236947 67.7360843,0 c 2.782649,0 5.022831,2.23 5.022831,5 l 0,24.6482333 c 0,2.77 -2.240182,5 -5.022831,5 l -67.7360843,0 c -2.7826481,0 -5.0228307,-2.23 -5.0228307,-5 l 0,-24.6482333 c 0,-2.77 2.2401826,-5 5.0228307,-5 z" style="stroke-dasharray: 216.275741577148px, 216.275741577148px; stroke-dashoffset: 0px;">-->
+
+    <!--</path>-->
+<!--</svg>-->
+
+<!--<div shine-button></div>-->
+<!--<a data-svg="demo-link-1" class="show" href="index.html">Demo 1</a>-->
+
+<!--<div ng-class="divclass">{{class}}</div>-->
+<!--<button ng-click="changeClass()">Change Class</button>-->

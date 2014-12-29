@@ -9,19 +9,22 @@ define(['./app'], function (app) {
                   data: {
                       roles: ['public']
                   },
-                  templateUrl: "views/bone3/version1.0.html"
+                  templateUrl: "views/bone3/version1.1.html"
               })
               .state('public.index', {
                   url: '/',
                   views:{
                       "nav": {
-                          templateUrl: 'views/public/nav.html',
-                      },
-                      "big-banner": {
-                          templateUrl: 'views/public/big-banner.html',
+                          templateUrl: 'views/public/1.1/nav.html',
                       },
                       "body": {
-                          templateUrl: 'views/public/body.html'
+                          templateUrl: 'views/public/1.1/body.html'
+                      },
+                      "section1": {
+                          templateUrl: 'views/public/1.1/section1.html'
+                      },
+                      "section2": {
+                          templateUrl: 'views/public/1.1/section2.html'
                       },
                       "footer":{
                           templateUrl: 'views/footer.html'
@@ -115,6 +118,10 @@ define(['./app'], function (app) {
                       "projects@site.ws":{
                          templateUrl: 'views/workspace/projects.html'
                       },
+                      //body里面的status
+                      "myStatus@site.ws":{
+                         templateUrl: 'views/workspace/myStatus.html'
+                      },
                       "left":{
                           templateUrl: 'views/workspace/left.html'
                        },
@@ -132,16 +139,17 @@ define(['./app'], function (app) {
                       },
                       "body": {
                           templateUrl: 'views/project/body.html',
-                          controller: 'projectCtrl'
                       },
                       "crumbs@site.project":{
                          templateUrl: 'views/project/crumbs.html'
                       },
                       "members@site.project":{
-                         templateUrl: 'views/project/members.html'
+                         templateUrl: 'views/project/members.html',
+
                       },
                       "content@site.project":{
-                         templateUrl: 'views/project/content.html'
+                         templateUrl: 'views/project/content.html',
+                         controller: 'projectCtrl'
                       },
                       "left":{
                           templateUrl: 'views/project/left.html',

@@ -1,13 +1,54 @@
-<h4>項目信息</h4>
-<dl>
-    <dt class="wiki-page">
-        <span class="project" ui-sref="site.project">goodcode</span>
-        <span class="time">【<a href="#">10 </a>未处理问题单，共<a href="#">22</a>个】</span>
-        <dd><span class="description">已经使用120个小时，还剩下4个小时了</span></dd>
-    </dt>
-    <dt class="wiki-page">
-        <span class="project" ui-sref="site.project">cloud_one</span>
-        <span class="time">【<a href="#">10 </a>未处理问题单，共<a href="#">22</a>个】</span>
-        <dd><span class="description">已经使用120个小时，还剩下4个小时了</span></dd>
-    </dt>
-</dl>
+
+<div role="tabpanel">
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#" aria-controls="home" role="tab" data-toggle="tab">项目列表</a></li>
+        <li role="presentation"><a href="#" aria-controls="profile" role="tab" data-toggle="tab">服务列表</a></li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="home">
+
+            <ul>
+                <li class="wiki-page">
+                    <span class="project" ui-sref="site.project">goodcode</span>
+                    <div>
+                    <span class="time">【<a href="#">10 </a>未处理问题单，共<a href="#">22</a>个】</span>
+                    </div>
+                    <div>
+                    <span class="description">已经使用120个小时，还剩下4个小时了</span>
+                    </div>
+                </li>
+                <li class="wiki-page">
+                    <span class="project" ui-sref="site.project">cloud_one</span>
+                    <div>
+                        <span class="time">【<a href="#">10 </a>未处理问题单，共<a href="#">22</a>个】</span>
+                    </div>
+                    <div>
+                        <span class="description">已经使用120个小时，还剩下4个小时了</span>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+        <div role="tabpanel" class="tab-pane" id="profile">
+
+            <dl>
+                <dt class="wiki-page">
+                    <span class="project" ui-sref="site.project">service1</span>
+                    <span class="time">【<a href="#">10 </a>未处理问题单，共<a href="#">22</a>个】</span>
+                <dd><span class="description">已经使用120个小时，还剩下4个小时了</span></dd>
+                </dt>
+                <dt class="wiki-page">
+                    <span class="project" ui-sref="site.project">service2</span>
+                    <span class="time">【<a href="#">10 </a>未处理问题单，共<a href="#">22</a>个】</span>
+                <dd><span class="description">已经使用120个小时，还剩下4个小时了</span></dd>
+                </dt>
+            </dl>
+
+        </div>
+    </div>
+
+</div>

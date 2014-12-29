@@ -5,15 +5,30 @@
 
 
 
-define(['../module'], function (controllers) {
+define(['../module', 'd3'], function (controllers, d3) {
     'use strict';
-    controllers.controller('projectCtrl', ['authService', '$state' , 'toaster',  function (authService, $state, toaster) {
+    controllers.controller('projectCtrl', ['$scope', 'almSvgService', 'authService', '$state' , 'toaster',  function ($scope, almSvgService, authService, $state, toaster) {
 
         if (!authService.isLoggedIn()) {
             $state.go('anon.login');
             toaster.pop('error', "", '用户未登录');
         } else {
-            console.log("用户已经登录");
+           $scope.status = {
+                isopen: false
+            };
+
+            $scope.toggleDropdown = function($event) {
+                $event.preventDefault();
+                $event.stopPropagation();
+                $scope.status.isopen = !$scope.status.isopen;
+            };
+
+
+            $scope.addReq = function($event) {
+                console.log("add req");
+                almSvgService.addSampleBox(d3);
+            };
+
         }
     1}]);
 });

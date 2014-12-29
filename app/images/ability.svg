@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="166"
+   height="166"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="ability.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="473.95418"
+     inkscape:cy="867.92471"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="987"
+     inkscape:window-x="0"
+     inkscape:window-y="28"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       sodipodi:type="star"
+       style="opacity:0.95999995;fill:#aaac00;fill-opacity:0;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path2985"
+       sodipodi:sides="5"
+       sodipodi:cx="165.71429"
+       sodipodi:cy="358.07648"
+       sodipodi:r1="302.91104"
+       sodipodi:r2="247.33179"
+       sodipodi:arg1="0.9461609"
+       sodipodi:arg2="1.4572895"
+       inkscape:flatsided="false"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="M 342.85715,603.79076 193.7279,603.81669 -13.233721,602.47923 -59.341855,460.6569 -122.02452,263.41141 -1.3916574,175.73445 166.82994,55.16749 287.49329,142.80249 454.14262,265.5335 408.0838,407.37186 z"
+       inkscape:transform-center-x="-0.069100781"
+       inkscape:transform-center-y="-5.4976399"
+       transform="matrix(0.20044097,0,0,0.19224294,53.763003,33.285424)" />
+    <text
+       xml:space="preserve"
+       style="font-size:9.51927185px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="76.356308"
+       y="26.802353"
+       id="text2989"
+       sodipodi:linespacing="125%"
+       transform="scale(1.0126864,0.98747252)"><tspan
+         sodipodi:role="line"
+         id="tspan2991"
+         x="76.356308"
+         y="26.802353">研发</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:9.51927185px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="147.75078"
+       y="81.198128"
+       id="text2993"
+       sodipodi:linespacing="125%"
+       transform="scale(1.0126864,0.98747252)"><tspan
+         sodipodi:role="line"
+         id="tspan2995"
+         x="147.75078"
+         y="81.198128">管理</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:9.51927185px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="119.87288"
+       y="162.79201"
+       id="text2997"
+       sodipodi:linespacing="125%"
+       transform="scale(1.0126864,0.98747252)"><tspan
+         sodipodi:role="line"
+         id="tspan2999"
+         x="119.87288"
+         y="162.79201">测试</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:9.51927185px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="38.279152"
+       y="163.47197"
+       id="text3001"
+       sodipodi:linespacing="125%"
+       transform="scale(1.0126864,0.98747252)"><tspan
+         sodipodi:role="line"
+         id="tspan3003"
+         x="38.279152"
+         y="163.47197">构建</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:9.51927185px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="6.3216019"
+       y="81.878067"
+       id="text3005"
+       sodipodi:linespacing="125%"
+       transform="scale(1.0126864,0.98747252)"><tspan
+         sodipodi:role="line"
+         id="tspan3007"
+         x="6.3216019"
+         y="81.878067">协同</tspan></text>
+    <path
+       sodipodi:type="arc"
+       style="opacity:0.95999995;fill:#aaac00;fill-opacity:0;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path3009"
+       sodipodi:cx="371.42856"
+       sodipodi:cy="418.07648"
+       sodipodi:rx="14.285714"
+       sodipodi:ry="14.285714"
+       d="m 385.71427,418.07648 a 14.285714,14.285714 0 1 1 -28.57143,0 14.285714,14.285714 0 1 1 28.57143,0 z"
+       transform="matrix(0.24100092,0,0,0.23500048,-2.5496697,2.0756956)" />
+    <text
+       xml:space="preserve"
+       style="font-size:9.51927185px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="4.9617081"
+       y="11.843491"
+       id="text3002"
+       sodipodi:linespacing="125%"
+       transform="scale(1.0126864,0.98747252)"><tspan
+         sodipodi:role="line"
+         id="tspan3004"
+         x="4.9617081"
+         y="11.843491">能力统计</tspan></text>
+  </g>
+</svg>

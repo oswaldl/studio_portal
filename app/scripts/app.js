@@ -19,12 +19,12 @@ define([
     'r.angular',
     'r.angularUiRouter',
     './controllers/index',
-//    './directives/index',
+    './directives/index',
 //    './filters/index',
     './services/index',
     'r.angularCookie',
     'r.angularMock',
-    'r.d3',
+    'd3',
     'r.angularToaster',
     'r.angularUiBootstrap',
 ], function (ng) {
@@ -34,11 +34,13 @@ define([
         'ui.router',
         'app.services',
         'app.controllers',
+        'app.directives',
         'ipCookie',
         'ngMockE2E',
         'toaster',
         'ui.bootstrap',
-//        'app.directives'
+//        'd3',
+
     ]).run(['$rootScope', function ($rootScope) {
 
             /*$rootScope.$state = $state;

@@ -436,3 +436,35 @@ special log
   line-height: 20px;
   margin: 0 5px;
 }
+
+/* for tabs */
+.ng-hide, [ng-cloak] {
+    display: none !important;
+}
+
+.ng-show {
+    display: block !important;
+}
+
+
+.repo-list-stats {
+margin-top: 6px;
+float: right;
+font-size: 12px;
+font-weight: bold;
+color: #888;
+}
+
+.repo-list-name {
+margin: 0 0 8px;
+font-size: 20px;
+line-height: 1.2;
+}
+
+.repo-list-description {
+max-width: 550px;
+margin-top: 8px;
+margin-bottom: 0;
+font-size: 14px;
+color: #666;
+}

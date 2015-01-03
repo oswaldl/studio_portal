@@ -12,5 +12,7 @@ define([
     './project/create/stepMemberCtrl',
     './project/create/stepStatusCtrl',
     './bz/autoCompleteCtrl',
+    './bz/historyCtrl',
+
 
 ], function () {});

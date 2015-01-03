@@ -1,7 +1,224 @@
 
-<div class="row">
-    <div class="col-md-12 divide-header" ui-view="myStatus"></div>
-    <div class="col-md-8" ui-view="activities"></div>
-    <div class="col-md-4" ui-view="projects"></div>
-</div>
+<!--<div class="row">-->
+    <!--<div class="col-md-12 divide-header" ui-view="myStatus"></div>-->
+    <!--<div class="col-md-8" ui-view="activities"></div>-->
+    <!--<div class="col-md-4" ui-view="projects"></div>-->
+<!--</div>-->
 
+<style>
+    /*低版本不兼容做法*/
+    .tab-pane{
+        display:none;
+        visibility:visible !important;
+    }
+
+</style>
+<div ng-tabs class="tabbable">
+
+    <ul class="nav nav-tabs">
+        <li ng-tab-head="active">
+            <a href="#" ng-click="$event.preventDefault()">项目列表</a>
+        </li>
+        <li ng-tab-head="active">
+            <a href="#" ng-click="$event.preventDefault()">服务列表</a>
+        </li>
+        <li ng-tab-head>
+            <a href="#" ng-click="$event.preventDefault()">最新动态</a>
+        </li>
+        <li ng-tab-head>
+            <a href="#" ng-click="$event.preventDefault()">浏览记录</a>
+        </li>
+    </ul>
+
+    <!--
+        animated bounceInLeft
+        animated fadeInUpBig
+        animated fadeInRightBig
+    -->
+    <div class="tab-content" style="overflow: hidden">
+        <div ng-tab-body="animated fadeInUpBig" class="tab-pane">
+            <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <!--<div class="panel-heading">Panel heading</div>-->
+                <!--<div class="panel-body">-->
+                    <!--<p>Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>-->
+                <!--</div>-->
+
+                <!-- Table -->
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <div class="repo-list-stats" >
+                            JavaScript
+                            <a><span class="badge">0</span></a>
+                        </div>
+
+                        <h3 class="repo-list-name"><a ui-sref="site.project">studio_portal</a></h3>
+
+                        <p class="repo-list-description">portal for studio of devops</p>
+
+                        <!--<p class="repo-list-meta">-->
+                            <!--Updated <time datetime="2015-01-03T04:24:32Z" is="relative-time" title="Jan 3, 2015, 12:24 PM CST">9 hours ago</time>-->
+                        <!--</p>-->
+
+                        <!--<div class="participation-graph">-->
+                            <!--<canvas class="js-participation-graph bars" data-color-all="#F5F5F5" data-color-owner="#DFDFDF" data-source="/oswaldl/studio_portal/graphs/owner_participation" height="71" width="575" style="width: 640px; height: 80px;"></canvas>-->
+                        <!--</div>-->
+                    </li>
+                    <li class="list-group-item">
+                        <div class="repo-list-stats" >
+                            JavaScript
+                            <a><span class="badge">2</span></a>
+                        </div>
+
+                        <h3 class="repo-list-name"><a ui-sref="site.project">ABPlayerHTML5</a></h3>
+
+                        <p class="repo-list-description">Video Player for danmaku comments. ABPlayer in HTML5. ABPlayer</p>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="repo-list-stats" >
+                            Ruby
+                            <a><span class="badge">200</span></a>
+                        </div>
+
+                        <h3 class="repo-list-name"><a ui-sref="site.project">gitlabhq</a></h3>
+
+                        <p class="repo-list-description">Open source software to collaborate on code. Follow us on twitter @gitlabhq</p>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="repo-list-stats" >
+                            Ruby
+                            <a><span class="badge">10</span></a>
+                        </div>
+
+                        <h3 class="repo-list-name"><a ui-sref="site.project">sharehub</a></h3>
+
+                        <p class="repo-list-description">sharehub is a picture or photo sharing website based on rails.It's not perfect now,but working.I will working on it.</p>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="repo-list-stats" >
+                            R
+                            <a><span class="badge">961</span></a>
+                        </div>
+
+                        <h3 class="repo-list-name"><a ui-sref="site.project">ML_for_Hackers</a></h3>
+
+                        <p class="repo-list-description">Code accompanying the book "Machine Learning for Hackers"</p>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="repo-list-stats" >
+                            Scala
+                            <a><span class="badge">0</span></a>
+                        </div>
+
+                        <h3 class="repo-list-name"><a ui-sref="site.project">PredictionIO</a></h3>
+
+                        <p class="repo-list-description">PredictionIO, a machine learning server for software developers and data engineers.</p>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="repo-list-stats" >
+                            Groovy
+                            <a><span class="badge">1</span></a>
+                        </div>
+
+                        <h3 class="repo-list-name"><a ui-sref="site.project">CMon</a></h3>
+
+                        <p class="repo-list-description">Platform Web Monitor</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div ng-tab-body="animated fadeInUpBig" class="tab-pane">
+            <div class="row line-space">
+
+                <div class="col-sm-3 col-md-3">
+                    <div class="thumbnail">
+                        <img ng-src="/app/images/service_icon/redmine.png" alt="Redmine">
+                        <div class="caption ">
+                            <h3>Redmine</h3>
+                            <p class="hideOverflow">Bug Tracking</p>
+                            <p class="hideOverflow">已经使用23天</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-3 col-md-3">
+                    <div class="thumbnail">
+                        <img ng-src="/app/images/service_icon/jenkins.png" alt="Jenkins">
+                        <div class="caption ">
+                            <h3>Jenkins</h3>
+                            <p class="hideOverflow">Continuous Integration</p>
+                            <p class="hideOverflow">已经使用20天</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div ng-tab-body="animated fadeInUpBig" class="tab-pane">
+            <div id="activity">
+                <h4>12/09/2014</h4>
+                <dl>
+                    <div class="issue">
+                        <span class="time">07:16 AM</span>
+                        <span class="project"><a ui-sref="site.project">studio_portal</a></span>
+                        <a href="#">功能 #9 (新建): 首页设计</a>
+                       <span class="description">简单设计即可</span>
+                    </div>
+
+                    <div class="issue">
+                        <span class="time">07:12 AM</span>
+                        <span class="project"><a ui-sref="site.project">studio_portal</a></span>
+                        <a href="#">功能 #8 (新建): 个人中心前台Demo</a>
+                        <span class="description"></span>
+                    </div>
+                    <div class="issue-edit">
+                        <span class="time">07:04 AM</span>
+                        <span class="project"><a ui-sref="site.project">studio_portal</a></span>
+                        <a href="#">功能 #2 (进行中): 添加用户登录功能</a>
+                       <span class="description">进行中</span>
+                    </div>
+                </dl>
+
+                <h4>12/04/2014</h4>
+                <dl>
+                    <div class="wiki-page">
+                        <span class="time">10:57 AM</span>
+                        <span class="project">goodcode</span>
+                        <a href="#">Wiki edit: Wiki (#7)</a>
+                        <span class="description"></span>
+                    </div>
+                    <div class="wiki-page">
+                        <span class="time">10:54 AM</span>
+                        <span class="project">goodcode</span>
+                        <a href="#">Wiki edit: Wiki (#6)</a>
+                        <span class="description"></span>
+                    </div>
+                </dl>
+            </div>
+        </div>
+        <div ng-tab-body class="tab-pane">
+            <ul>
+                <li> <a href="#">project A</a> @<a href="#">oswaldl</a> at 2014-05-06 12:20</li>
+                <li> <a href="#">project B</a> @<a href="#">bill</a> at 2014-05-06 12:20</li>
+                <li> <a href="#">service A</a> @<a href="#">oswaldl</a> at 2014-05-06 12:20</li>
+                <li> <a href="#">project A</a> @<a href="#">oswaldl</a> at 2014-05-06 12:20</li>
+                <li> <a href="#">project B</a> @<a href="#">bill</a> at 2014-05-06 12:20</li>
+                <li> <a href="#">service A</a> @<a href="#">oswaldl</a> at 2014-05-06 12:20</li>
+                <li> <a href="#">project A</a> @<a href="#">oswaldl</a> at 2014-05-06 12:20</li>
+                <li> <a href="#">project B</a> @<a href="#">bill</a> at 2014-05-06 12:20</li>
+                <li> <a href="#">service A</a> @<a href="#">oswaldl</a> at 2014-05-06 12:20</li>
+                <li> <a href="#">project A</a> @<a href="#">oswaldl</a> at 2014-05-06 12:20</li>
+                <li> <a href="#">project B</a> @<a href="#">bill</a> at 2014-05-06 12:20</li>
+                <li> <a href="#">service A</a> @<a href="#">oswaldl</a> at 2014-05-06 12:20</li>
+                <li> <a href="#">project A</a> @<a href="#">oswaldl</a> at 2014-05-06 12:20</li>
+                <li> <a href="#">project B</a> @<a href="#">bill</a> at 2014-05-06 12:20</li>
+                <li> <a href="#">service A</a> @<a href="#">oswaldl</a> at 2014-05-06 12:20</li>
+                <li> <a href="#">project A</a> @<a href="#">oswaldl</a> at 2014-05-06 12:20</li>
+                <li> <a href="#">project B</a> @<a href="#">bill</a> at 2014-05-06 12:20</li>
+                <li> <a href="#">service A</a> @<a href="#">oswaldl</a> at 2014-05-06 12:20</li>
+            </ul>
+        </div>
+    </div>
+</div>

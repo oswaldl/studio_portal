@@ -4,7 +4,7 @@
 
 define(['./module'],function (services) {
     'use strict';
-    services.run(['$httpBackend', '$log', function ($httpBackend, $log) {
+    services.run(['$httpBackend', '$log', '$http', '$location', function ($httpBackend, $log, $http, $location) {
 
             var userStorage = angular.fromJson(localStorage.getItem('userStorage')),
                 emailStorage = angular.fromJson(localStorage.getItem('emailStorage'));
@@ -25,6 +25,9 @@ define(['./module'],function (services) {
             }
 
            $httpBackend.whenGET(/views/).passThrough();
+           $httpBackend.whenGET(/mock_data/).passThrough();
+
+
 
             //fakeLogin
             $httpBackend.when('POST', '/login').respond(function (method, url, data, headers) {
@@ -51,6 +54,9 @@ define(['./module'],function (services) {
 
                 return [200, {}, {}];
             });
+
+            // get dev tools data
+
 
 
 

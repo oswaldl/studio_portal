@@ -10,7 +10,7 @@
             </ul>
             <ul class="nav navbar-nav navbar-right" ng-show="isLogged">
                 <li><a ui-sref="site.account({uid:user.userName})">{{ user.userName }}</a></li>
-                <li><a href="javascript:;" ng-click="logout()">[退出]<i class="fa fa-signout"></i> </a></li>
+                <li><a href="#" ><span class="glyphicon glyphicon-log-out" ng-click="logout()" title="logout"></span></a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>

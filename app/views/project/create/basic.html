@@ -1,0 +1,44 @@
+
+
+<form class="form-horizontal" id="components">
+    <!--<h1>请输入项目基本信息</h1>-->
+
+    <div class="form-group">
+        <label for="inputType" class="col-md-4 control-label">名称</label>
+        <div class="col-md-4">
+            <input type="text" class="form-control" id="inputType" placeholder="projectA">
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="radios">是否公开</label>
+        <div class="col-md-4">
+            <label class="radio inline" for="radios-0">
+                <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
+                公开
+            </label>
+            <label class="radio inline" for="radios-1">
+                <input type="radio" name="radios" id="radios-1" value="2">
+                不公开
+            </label>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="textarea">项目描述</label>
+        <div class="col-md-4">
+            <textarea id="textarea" name="textarea" class="form-control" placeholder="可以不填"></textarea>
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <div class="col-md-4 ">
+            <div class="pull-right">
+                <button id="prev_btn" name="prev_btn" wz-next class="btn btn-primary">下一步</button>
+            </div>
+        </div>
+    </div>
+
+</form>

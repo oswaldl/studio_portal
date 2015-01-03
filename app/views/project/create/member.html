@@ -1,0 +1,36 @@
+<div>
+        <div ng-controller="autoCompleteCtrl">
+            <div auto-complete url="/searchMember" model="data.tags"></div>
+        </div>
+        <!--<input type="text" placeholder="Enter user name" id="new-candidate" value="" x-webkit-speech="">-->
+
+
+        <div class="panel panel-default">
+            <div class="panel-heading">成员列表</div>
+            <div class="item-list-container">
+                <ul class="item-list">
+                    <li ng-repeat="selectedMem in data.users">
+                        <span>{{selectedMem}}</span>
+                        <span class="glyphicon glyphicon-remove delete" aria-hidden="true" ng-click="remove($index)" ></span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+
+        <div class="btn-set">
+            <button class="btn primary-btn btn-done" ng-click="removeAll()">Delete All</button>
+        </div>
+</div>
+
+<div class="form-group">
+    <div class="col-md-4 ">
+        <div class="pull-right">
+            <button id="prev_btn" name="prev_btn" wz-previous class="btn btn-primary">上一步</button>
+        </div>
+    </div>
+    <div class="col-md-4 ">
+        <button id="after_btn" name="after_btn" wz-next class="btn btn-primary">完成</button>
+    </div>
+</div>

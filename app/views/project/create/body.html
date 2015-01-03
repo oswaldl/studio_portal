@@ -1,0 +1,21 @@
+<div class="container">
+
+    <wizard on-finish="finishedWizard()">
+        <wz-step title="基本信息" canexit="exitValidation" style="position: relative">
+            <div ui-view="basic_info" class="container"></div>
+        </wz-step>
+        <wz-step title="开发框架" canenter="enterValidation">
+            <div ui-view="frame_info"></div>
+        </wz-step>
+        <wz-step title="应用工具" canenter="enterValidation">
+            <div ui-view="tools_info"></div>
+        </wz-step>
+        <wz-step title="人员选择" canenter="enterValidation">
+            <div ui-view="member_info"></div>
+        </wz-step>
+        <wz-step title="申请状态">
+            <div ui-view="status_info"></div>
+        </wz-step>
+    </wizard>
+
+</div>

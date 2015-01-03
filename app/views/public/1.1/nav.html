@@ -11,8 +11,30 @@
                 <li><a href="#">Support</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right" ng-show="isLogged">
-                <li><a ui-sref="site.account({uid:user.userName})">{{ user.userName }}</a></li>
-                <li><a href="javascript:;" ng-click="logout()">[退出]<i class="fa fa-signout"></i> </a></li>
+                <li>
+                    <a ui-sref="site.ws({uid:user.userName})"> {{ user.userName }}</a>
+                </li>
+                <li>
+                    <div dropdown is-open="status.isopen">
+                        <span class="glyphicon glyphicon-envelope" dropdown-toggle></span>
+                        <!--<span class="badge">8</span>-->
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">projectA正在创建</a></li>
+                            <li><a href="#">oswaldl给您私信了</a></li>
+                            <li><a href="#">oswalld给您赞了</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div dropdown is-open="status.isopen2">
+                        <span class="glyphicon glyphicon-plus" dropdown-toggle></span>
+                        <ul class="dropdown-menu" role="menu2">
+                            <li><a href="#">创建项目</a></li>
+                            <li><a href="#">申请服务</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#" ><span class="glyphicon glyphicon-log-out" ng-click="logout()" title="logout"></span></a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>

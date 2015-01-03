@@ -246,92 +246,193 @@ nav add menu from github
 special log
 */
 .demo-loading .show, .demo-loading {
--webkit-transition: opacity 0.5s;
-transition: opacity 0.5s;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
 }
 
 /*
 首页标题
 */
 .text-heading {
-position: relative;
-width: 100%;
-left: 0;
-right: 0;
-text-align: center;
-padding-top: 135px;
+  position: relative;
+  width: 100%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding-top: 135px;
 }
 
 /*
 首页页面插图
 */
 .front-image {
-display: block;
-max-width: 100%;
-height: auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 /*
 首页背景
 */
 .static-header {
-background: url('/app/images/intro_background.jpg') no-repeat center center;
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;
-background-attachment: fixed;
-min-height: 900px;
-position: relative;
+  /*
+  background: url('/app/images/intro_background.jpg') no-repeat center center;
+
+  */
+  background: url('/app/images/clouds.jpg') no-repeat center center;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 900px;
+  position: relative;
 }
 
 .light {
-color: #fff;
+  color: #fff;
 }
 
 .fbtn {
-border: 1px solid #fff;
-font-size: 13px;
-border-radius: 3px;
-background: transparent;
-text-transform: uppercase;
-font-weight: 700;
-padding: 15px 40px;
-min-width: 162px;
-max-width: 100%;
+  border: 1px solid #fff;
+  font-size: 13px;
+  border-radius: 3px;
+  background: transparent;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 15px 40px;
+  min-width: 162px;
+  max-width: 100%;
 }
 
 .animated {
--webkit-animation-duration: 1s;
-animation-duration: 1s;
--webkit-animation-fill-mode: both;
-animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
 
 .bounceIn {
--webkit-animation-name: bounceIn;
-animation-name: bounceIn;
+  -webkit-animation-name: bounceIn;
+  animation-name: bounceIn;
 }
 
-.avatar { max-width:100%;
-          max-height:100%;}
+.avatar {
+  max-width:100%;
+  max-height:100%;
+}
 
 
 .hide {
-opacity: 0;
+  opacity: 0;
 }
 
 .divide-header {
-font-family: Trebuchet MS,Liberation Sans,DejaVu Sans,sans-serif;
-width: 100%;
-margin-bottom: 20px;
-border-bottom: 1px solid #ccc;
-clear: both;
+  font-family: Trebuchet MS,Liberation Sans,DejaVu Sans,sans-serif;
+  width: 100%;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  clear: both;
 }
 
 .line-space {
-font-family: Trebuchet MS,Liberation Sans,DejaVu Sans,sans-serif;
-margin: 2.5px;
-clear: both;
+  font-family: Trebuchet MS,Liberation Sans,DejaVu Sans,sans-serif;
+  margin: 2.5px;
+  clear: both;
+}
+
+
+.jumbotron {
+  padding: 30px 15px;
+  margin-bottom: 30px;
+  color: inherit;
+  background:transparent;
+  color: #7aa4cc;
+}
+
+/* 创建项目中的成员列表 */
+.item-list {
+  height: 284px;
+  overflow: auto;
+  list-style-type: none;
+  /*background: #eee; */
+  margin-bottom: 1px;
+  border: 1px solid #ddd;
+  line-height: 1.5;
+}
+
+.item-list .delete {
+  display: none;
+  float: right;
+  margin-right: 20px;
+}
+
+.item-list li:hover {
+  color: #a33024;
+  background: #fae5e5;
+  transition: all .3s ease-out;
+  cursor: pointer;
+}
+
+.item-list li:hover .delete {
+  display: inline;
+}
+
+.item-list li:hover .delete:hover {
+  color: #602a25;
+}
+
+/* auto complete */
+.suggestions-list {
+    position: absolute;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    font-size: 14px;
+}
+.suggestions-list li {
+    color: #333333;
+    font-weight: 600;
+    padding: 4px 25px;
+    font-size: 1em;
+    cursor: pointer;
+    background: #f2f2f2;
+    border-bottom: 1px solid #dddddd;
+}
+.suggestions-list li:hover {
+    background: #dddddd;
+}
+.suggestions-list li:active,
+.suggestions-list li.active {
+    color: #20a28e;
+    background: #dddddd;
+}
+.suggestions-list:focus{
+    outline:none;
+}
+
+
+.hideOverflow
+{
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    width:100%;
+    display:block;
+}
+
+.navbar-nav > li > div {
+  padding-top: 15px;
+  padding-bottom: 10px;
+  line-height: 20px;
+  margin: 0 5px;
 }

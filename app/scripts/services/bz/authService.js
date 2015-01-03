@@ -2,7 +2,6 @@ define(['services/module'],
     function(services){
         "use strict";
         services.service('authService', ['ipCookie', '$http', function(ipCookie, $http){
-            console.log('authService');
             var currentUser = ipCookie('user') || {userName:'',roles:null};
 
             function changeUser (user){

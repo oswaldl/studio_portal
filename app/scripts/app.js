@@ -27,6 +27,9 @@ define([
     'd3',
     'r.angularToaster',
     'r.angularUiBootstrap',
+    'r.angularWizard',
+//    'r.bootstrap',
+
 ], function (ng) {
     'use strict';
 
@@ -39,6 +42,7 @@ define([
         'ngMockE2E',
         'toaster',
         'ui.bootstrap',
+        'mgo-angular-wizard',
 //        'd3',
 
     ]).run(['$rootScope', function ($rootScope) {

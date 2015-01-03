@@ -29,6 +29,9 @@ require.config({
         'd3': '../bower_components/d3.github.com/d3.v3.min',
         'r.angularAnimate': '../bower_components/angular-animate/angular-animate',
         'r.angularToaster': '../bower_components/AngularJS-Toaster/toaster',
+        'r.angularWizard': 'vendor/angular-wizard',
+        'r.lodash': '../bower_components/lodash/dist/lodash',
+        'r.bootstrap': '../bower_components/bootstrap/dist/js/bootstrap',
     },
 
     // angular does not support AMD out of the box, put it in a shim
@@ -55,10 +58,16 @@ require.config({
         'r.angularToaster':{
             deps: ['r.angular','r.angularAnimate']
         },
-
         'd3':{
             exports: 'd3'
         },
+        'r.angularWizard':{
+            deps: ['r.angular','r.lodash']
+        },
+        'r.bootstrap': {
+            deps: [ 'r.jquery'],
+        },
+
     },
 
     // kick start application

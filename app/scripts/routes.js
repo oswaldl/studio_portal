@@ -2,7 +2,9 @@ define(['./app'], function (app) {
     'use strict';
     return app.config(['$stateProvider','$urlRouterProvider', function ($stateProvider,$urlRouterProvider) {
           $urlRouterProvider.otherwise('/');
-          //commone state
+          /*commone state
+            分2+N版：上中+N个section
+          */
           $stateProvider
               .state('public', {
                   abstract: true,
@@ -42,7 +44,9 @@ define(['./app'], function (app) {
                   }
               });//end one stateProvider
 
-          //login and register - [role - anon]
+          /*login and register - [role - anon]
+          分2版：上中
+          */
           $stateProvider
               .state('anon', {
                   abstract: true,
@@ -77,10 +81,13 @@ define(['./app'], function (app) {
                           templateUrl: 'views/footer.html'
                       }
                   }
-              });//end one stateProvider
+              })
+              ;//end one stateProvider
 
 
-          // Main routes - [role - user]
+          /* Main routes - [role - user]
+             分三版：上左中
+          */
           $stateProvider
               .state('site', {
                   abstract: true,
@@ -160,7 +167,61 @@ define(['./app'], function (app) {
                       }
                   }
               })
+
               ;//end one stateProvider
+
+
+          /*login and register - [role - anon]
+          分2版：上中
+          */
+          $stateProvider
+              .state('bone2', {
+                  abstract: true,
+                  data: {
+                      roles: ['public']
+                  },
+                  templateUrl: "views/bone2/version1.0.html"
+              })
+              .state('bone2.create_project', {
+                  url: '/create_project',
+                  views: {
+                      "nav": {
+                          templateUrl: 'views/nav.html',
+                          controller: 'navCtrl'
+                      },
+                      "body": {
+                          templateUrl: 'views/project/create/body.html',
+                          controller: 'createProjectCtrl'
+                      },
+                      "basic_info@bone2.create_project": {
+                          templateUrl: 'views/project/create/basic.html',
+                      },
+                      "frame_info@bone2.create_project":{
+                         templateUrl: 'views/project/create/frame.html',
+                         controller: 'stepFrameCtrl'
+                      },
+                      "tools_info@bone2.create_project":{
+                         templateUrl: 'views/project/create/tools.html',
+                         controller: 'stepToolsCtrl'
+
+                      },
+                      "member_info@bone2.create_project":{
+                         templateUrl: 'views/project/create/member.html',
+                         controller: 'stepMemberCtrl'
+
+                      },
+                      "status_info@bone2.create_project":{
+                         templateUrl: 'views/project/create/status.html',
+                         controller: 'stepStatusCtrl'
+
+                      },
+                      "footer":{
+                          templateUrl: 'views/footer.html'
+                      }
+                  }
+              })
+              ;//end one stateProvider
+
 
     }]);//end define function return
 });//end define

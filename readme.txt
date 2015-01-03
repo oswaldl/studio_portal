@@ -37,7 +37,7 @@ socket.io,跨域问题
 https
 用户头像的显示，支持自动生成的
 业务数据的加载都是异步的
-
+安全性考虑
 
 
 
@@ -57,10 +57,10 @@ git clone http://gc.chinacloudapp.cn:8089/{yourname}/studio_portal.git
 
 运行初始化脚本
 # install package，参考http://bower.io/
-bower init
+#bower init
 #bower install jquery --save
 #bower install angular --save
-
+#bower install
 
 #add building system: gulp
 #http://www.smashingmagazine.com/2014/06/11/building-with-gulp/

@@ -30,5 +30,5 @@ define(['../module', 'd3'], function (controllers, d3) {
             };
 
         }
-    1}]);
+    }]);
 });

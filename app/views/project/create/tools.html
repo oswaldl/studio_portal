@@ -1,26 +1,87 @@
 <div class="row">
+    <div class="panel panel-default">
+        <div class="panel-heading">项目管理</div>
+        <div class="panel-body">
+            <div class="col-sm-2 col-md-2" ng-repeat="alm_tool in alm_tools.project_management">
+                <div class="thumbnail">
+                    <img ng-src="{{alm_tool.image_url}}" alt="{{alm_tool.desc}}">
+                    <div class="caption center">
+                        <h3>{{alm_tool.name}}</h3>
+                        <p class="hideOverflow">{{alm_tool.desc}}</p>
+                        <input type="checkbox" name="checkbox" id="radios-project_management-{{alm_tool.name}}" value="" >
+                    </div>
 
-    <div class="col-sm-2 col-md-2" ng-repeat="alm_tool in alm_tools.dataset">
-        <div class="thumbnail">
-            <img ng-src="{{alm_tool.image_url}}" alt="{{alm_tool.desc}}">
-            <div class="caption ">
-                <h3>{{alm_tool.name}}</h3>
-                <p class="hideOverflow">{{alm_tool.desc}}</p>
-                <input type="checkbox" name="checkbox" id="radios-{{alm_tool.name}}" value="" >
+                </div>
             </div>
-
         </div>
     </div>
 
-</div>
+    <div class="panel panel-default">
+        <div class="panel-heading">配置管理</div>
+        <div class="panel-body">
+            <div class="col-sm-2 col-md-2" ng-repeat="alm_tool in alm_tools.version_control">
+                <div class="thumbnail">
+                    <img ng-src="{{alm_tool.image_url}}" alt="{{alm_tool.desc}}">
+                    <div class="caption center">
+                        <h3>{{alm_tool.name}}</h3>
+                        <p class="hideOverflow">{{alm_tool.desc}}</p>
+                        <input type="checkbox" name="checkbox" id="radios-version_control-{{alm_tool.name}}" value="" >
+                    </div>
 
-<div class="form-group">
-    <div class="col-md-6 ">
-        <div class="pull-right">
-            <button id="prev_btn" name="prev_btn" wz-previous class="btn btn-primary">上一步</button>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="col-md-6 ">
-        <button id="after_btn" name="after_btn" wz-next class="btn btn-primary">下一步</button>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">持续集成</div>
+        <div class="panel-body">
+            <div class="col-sm-2 col-md-2" ng-repeat="alm_tool in alm_tools.continuous_integration">
+                <div class="thumbnail">
+                    <img ng-src="{{alm_tool.image_url}}" alt="{{alm_tool.desc}}">
+                    <div class="caption center">
+                        <h3>{{alm_tool.name}}</h3>
+                        <p class="hideOverflow">{{alm_tool.desc}}</p>
+                        <input type="checkbox" name="checkbox" id="radios-continuous_integration-{{alm_tool.name}}" value="" >
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="panel panel-default">
+        <div class="panel-heading">测试工具</div>
+        <div class="panel-body">
+            <div class="col-sm-2 col-md-2" ng-repeat="alm_tool in alm_tools.test_management">
+                <div class="thumbnail">
+                    <img ng-src="{{alm_tool.image_url}}" alt="{{alm_tool.desc}}">
+                    <div class="caption center">
+                        <h3>{{alm_tool.name}}</h3>
+                        <p class="hideOverflow">{{alm_tool.desc}}</p>
+                        <input type="checkbox" name="checkbox" id="radios-test_management-{{alm_tool.name}}" value="" >
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="form-group">
+                <div class="col-md-6 ">
+                    <div class="pull-right">
+                        <button id="prev_btn" name="prev_btn" wz-previous class="btn btn-primary">上一步</button>
+                    </div>
+                </div>
+                <div class="col-md-6 ">
+                    <button id="after_btn" name="after_btn" wz-next class="btn btn-primary">下一步</button>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+

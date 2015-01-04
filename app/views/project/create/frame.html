@@ -1,26 +1,75 @@
 <div class="row">
 
-    <div class="col-sm-2 col-md-2" ng-repeat="dev_tool in dev_tools.dataset">
-        <div class="thumbnail">
-            <img ng-src="{{dev_tool.image_url}}" alt="{{dev_tool.desc}}">
-            <div class="caption ">
-                <h3>{{dev_tool.name}}</h3>
-                <p class="hideOverflow">{{dev_tool.desc}}</p>
-                <input type="checkbox" name="checkbox" id="radios-{{dev_tool.name}}" value="" >
+
+
+    <div class="panel panel-default">
+        <div class="panel-heading">编程语言</div>
+        <div class="panel-body">
+            <div class="col-sm-2 col-md-2" ng-repeat="dev_tool in dev_tools.lang">
+                <div class="thumbnail">
+                    <img ng-src="{{dev_tool.image_url}}" alt="{{dev_tool.desc}}">
+                    <div class="caption center">
+                        <h3>{{dev_tool.name}}</h3>
+                        <p class="hideOverflow">{{dev_tool.desc}}</p>
+                        <input type="checkbox" name="checkbox" id="radios-lang-{{dev_tool.name}}" value="" >
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="panel panel-default">
+        <div class="panel-heading">应用服务器</div>
+        <div class="panel-body">
+            <div class="col-sm-2 col-md-2" ng-repeat="dev_tool in dev_tools.server">
+                <div class="thumbnail">
+                    <img ng-src="{{dev_tool.image_url}}" alt="{{dev_tool.desc}}">
+                    <div class="caption center">
+                        <h3>{{dev_tool.name}}</h3>
+                        <p class="hideOverflow">{{dev_tool.desc}}</p>
+                        <input type="checkbox" name="checkbox" id="radios-server-{{dev_tool.name}}" value="" >
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">数据库</div>
+        <div class="panel-body">
+            <div class="col-sm-2 col-md-2" ng-repeat="dev_tool in dev_tools.database">
+                <div class="thumbnail">
+                    <img ng-src="{{dev_tool.image_url}}" alt="{{dev_tool.desc}}">
+                    <div class="caption center">
+                        <h3>{{dev_tool.name}}</h3>
+                        <p class="hideOverflow">{{dev_tool.desc}}</p>
+                        <input type="checkbox" name="checkbox" id="radios-database-{{dev_tool.name}}" value="" >
+                    </div>
+
+                </div>
+
             </div>
 
+
         </div>
     </div>
 
-</div>
-
-<div class="form-group">
-    <div class="col-md-6 ">
-        <div class="pull-right">
-            <button id="prev_btn" name="prev_btn" wz-previous class="btn btn-primary">上一步</button>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="form-group">
+                <div class="col-md-6 ">
+                    <div class="pull-right">
+                        <button id="prev_btn" name="prev_btn" wz-previous class="btn btn-primary">上一步</button>
+                    </div>
+                </div>
+                <div class="col-md-6 ">
+                    <button id="after_btn" name="after_btn" wz-next class="btn btn-primary">下一步</button>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="col-md-6 ">
-        <button id="after_btn" name="after_btn" wz-next class="btn btn-primary">下一步</button>
-    </div>
 </div>
+

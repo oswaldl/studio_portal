@@ -18,6 +18,7 @@ define(['./app'], function (app) {
                   views:{
                       "nav": {
                           templateUrl: 'views/public/1.1/nav.html',
+                          controller: 'navCtrl'
                       },
                       "body": {
                           templateUrl: 'views/public/1.1/body.html'
@@ -175,14 +176,14 @@ define(['./app'], function (app) {
           分2版：上中
           */
           $stateProvider
-              .state('bone2', {
+              .state('bone4', {
                   abstract: true,
                   data: {
                       roles: ['public']
                   },
-                  templateUrl: "views/bone2/version1.0.html"
+                  templateUrl: "views/bone4/version1.0.html"
               })
-              .state('bone2.create_project', {
+              .state('bone4.create_project', {
                   url: '/create_project',
                   views: {
                       "nav": {
@@ -193,24 +194,24 @@ define(['./app'], function (app) {
                           templateUrl: 'views/project/create/body.html',
                           controller: 'createProjectCtrl'
                       },
-                      "basic_info@bone2.create_project": {
+                      "basic_info@bone4.create_project": {
                           templateUrl: 'views/project/create/basic.html',
                       },
-                      "frame_info@bone2.create_project":{
+                      "frame_info@bone4.create_project":{
                          templateUrl: 'views/project/create/frame.html',
                          controller: 'stepFrameCtrl'
                       },
-                      "tools_info@bone2.create_project":{
+                      "tools_info@bone4.create_project":{
                          templateUrl: 'views/project/create/tools.html',
                          controller: 'stepToolsCtrl'
 
                       },
-                      "member_info@bone2.create_project":{
+                      "member_info@bone4.create_project":{
                          templateUrl: 'views/project/create/member.html',
                          controller: 'stepMemberCtrl'
 
                       },
-                      "status_info@bone2.create_project":{
+                      "status_info@bone4.create_project":{
                          templateUrl: 'views/project/create/status.html',
                          controller: 'stepStatusCtrl'
 

@@ -5,15 +5,13 @@ define(['services/module'],
 
             return {
                 getDevToolData: function(success,error){
-                    console.log("toolService1");
-                    $http.get('/app/mock_data/service_tools.json').success(function(res) {
-                        success(res.dev_tools);
+                    $http.get('/app/mock_data/dev_tools.json').success(function(res) {
+                        success(res);
                     }).error(error);
                 },
                 getAlmToolData: function(success,error){
-                    console.log("toolService2");
-                    $http.get('/app/mock_data/service_tools.json').success(function(res) {
-                        success(res.alm_tools);
+                    $http.get('/app/mock_data/alm_tools.json').success(function(res) {
+                        success(res);
                     }).error(error);
                 },
             }

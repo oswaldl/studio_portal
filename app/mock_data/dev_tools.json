@@ -1,0 +1,55 @@
+
+{
+  "lang": [
+    {
+      "image_url": "/app/images/service_icon/nodejs.png",
+      "name": "Nodejs",
+      "desc": "Infrastructure"
+    },
+    {
+      "image_url": "/app/images/service_icon/rails.png",
+      "name": "Ruby",
+      "desc": "Infrastructure"
+    },
+    {
+      "image_url": "/app/images/service_icon/grails.png",
+      "name": "Grails",
+      "desc": "Infrastructure"
+    },
+    {
+      "image_url": "/app/images/service_icon/liferay.png",
+      "name": "Liferay",
+      "desc": "Portal Server"
+    }
+  ],
+  "server": [
+    {
+      "image_url": "/app/images/service_icon/tomcat.png",
+      "name": "Tomcat",
+      "desc": "Infrastructure"
+    },
+    {
+      "image_url": "/app/images/service_icon/jboss.png",
+      "name": "Jboss",
+      "desc": "Infrastructure"
+    }
+  ],
+  "database": [
+    {
+      "image_url": "/app/images/service_icon/mariadb.png",
+      "name": "Mariadb",
+      "desc": "database"
+    },
+    {
+      "image_url": "/app/images/service_icon/mongodb.png",
+      "name": "Mongodb",
+      "desc": "NoSQL database"
+    }
+
+
+  ]
+
+
+
+}
+

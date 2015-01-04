@@ -2,7 +2,6 @@
 define(['../module'], function (controllers) {
     'use strict';
     controllers.controller('navCtrl', ['$rootScope', '$scope', '$state', 'authService', 'ipCookie', function ($rootScope, $scope, $state, authService, ipCookie) {
-       console.log('navCtrl');
         //如果cookie中才能在用户信息，就保持登陆状态
         if(ipCookie('user')) {
             $scope.user = ipCookie('user');

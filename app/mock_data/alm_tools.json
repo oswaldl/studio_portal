@@ -1,0 +1,59 @@
+
+{
+
+
+  "project_management":[
+    {
+      "image_url": "/app/images/service_icon/redmine.png",
+      "name": "Redmine",
+      "desc": "Bug Tracking"
+    }
+  ],
+  "version_control":[
+    {
+      "image_url": "/app/images/service_icon/svn.png",
+      "name": "Svn",
+      "desc": "Version Control"
+    },
+    {
+      "image_url": "/app/images/service_icon/gitorious.png",
+      "name": "Gitorious",
+      "desc": "Version Control"
+    },
+    {
+      "image_url": "/app/images/service_icon/gitlab.png",
+      "name": "Gitlab",
+      "desc": "Version Control"
+    }
+  ],
+  "continuous_integration":[
+    {
+      "image_url": "/app/images/service_icon/jenkins.png",
+      "name": "Jenkins",
+      "desc": "Continuous Integration"
+    }
+  ],
+  "test_management":[
+    {
+      "image_url": "/app/images/service_icon/jmeter.png",
+      "name": "Jmeter",
+      "desc": "Performance Test"
+    }
+  ],
+  "deploy":[
+    {
+      "image_url": "/app/images/service_icon/jenkins.png",
+      "name": "Jenkins",
+      "desc": "Continuous Integration"
+    }
+  ]
+
+
+}
+
+
+
+
+
+
+

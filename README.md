@@ -113,7 +113,7 @@ sudo firewall-cmd --permanent --zone=public --add-service=http
 sudo firewall-cmd --permanent --zone=public --add-service=https
 sudo firewall-cmd --reload
 
-# enable Nginx to start when your system boots.
+<<enable Nginx to start when your system boots.>>
 sudo systemctl enable nginx.service
 使用参考https://www.linode.com/docs/websites/nginx/basic-nginx-configuration
 sudo ln -s /etc/nginx/sites-available/studio.conf /etc/nginx/sites-enabled/studio.conf
@@ -125,9 +125,9 @@ getenforce
 setenforce Permissive
 chcon -Rt httpd_sys_content_t /home/oswaldl/IdeaProjects
 sudo setsebool -P httpd_can_network_connect on
-# 关闭
+<<关闭>>
 sudo setenforce Permissive
-# 开启
+<<开启>>
 sudo setenforce Enforcing
 
 set user as root

@@ -103,7 +103,6 @@ npm install ***
 npm install *** --save
 npm install -g ***
 
-##邮件列表指南(没空搭建)
 
 ##nginx安装指南(如果喜欢用nginx作静态服务器的同学可以用)
 sudo rpm -Uvh http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm
@@ -125,9 +124,9 @@ getenforce
 setenforce Permissive
 chcon -Rt httpd_sys_content_t /home/oswaldl/IdeaProjects
 sudo setsebool -P httpd_can_network_connect on
-<<关闭>>
+A.关闭
 sudo setenforce Permissive
-<<开启>>
+B.开启
 sudo setenforce Enforcing
 
 set user as root

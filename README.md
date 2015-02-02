@@ -4,7 +4,7 @@
 有任何问题，或在讨论，请在（内部：http://gc.chinacloudapp.cn/projects/zycloud/issues）提出
 以下是主干开发过程中的设想/知识整理/开发指南，希望对你了解系统有用
 
-##如何贡献代码
+如何贡献代码
 首先了解系统，知道大概是做什么的，不清楚业务的可以在（内部：http://gc.chinacloudapp.cn/projects/zycloud）查询相关信息，或在找负责人题问
 
 然后fork一份代码下来，尝试运行代码，参考《环境搭建》
@@ -14,7 +14,7 @@
 最后，提交merge request~
 
 
-##功能特性（有待实现的～）
+功能特性（有待实现的～）
 系统首页
 系统登陆
 个人中心
@@ -28,7 +28,7 @@
 socket.io,跨域问题
 
 
-##非功能性特性（有待实现的～）
+非功能性特性（有待实现的～）
 
 在线人数
 每个控件都是可以移除的，最后剩下骨骼代码
@@ -41,7 +41,7 @@ https
 
 
 
-##环境搭建
+环境搭建
 注意：如果你不是linux开发环境，可能比较悲哀了，因为我是在centos7下玩的哦
 
 1.安装一些东西
@@ -62,26 +62,26 @@ git clone http://gc.chinacloudapp.cn:8089/{yourname}/studio_portal.git
 
 
 3.运行初始化脚本
-# install package，参考http://bower.io/
-#bower init
-#bower install jquery --save
-#bower install angular --save
-#bower install
+install package，参考http://bower.io/
+bower init
+bower install jquery --save
+bower install angular --save
+bower install
 
-#add building system: gulp
-#http://www.smashingmagazine.com/2014/06/11/building-with-gulp/
-#http://slides.com/contra/gulp#/1
+add building system: gulp
+http://www.smashingmagazine.com/2014/06/11/building-with-gulp/
+http://slides.com/contra/gulp/1
 
 npm install
-#npm install -g gulp
-#npm install --save-dev gulp
-#npm install --save-dev gulp-uglify
-#npm install --save-dev gulp-jshint
-#npm install --save-dev gulp-concat
-#npm install --save-dev gulp-del
-#npm install --save-dev gulp-imagemin
-#npm install --save-dev gulp-sourcemaps
-#npm install --save-dev gulp-coffee
+npm install -g gulp
+npm install --save-dev gulp
+npm install --save-dev gulp-uglify
+npm install --save-dev gulp-jshint
+npm install --save-dev gulp-concat
+npm install --save-dev gulp-del
+npm install --save-dev gulp-imagemin
+npm install --save-dev gulp-sourcemaps
+npm install --save-dev gulp-coffee
 
 4.启动程序
 npm start
@@ -95,7 +95,7 @@ npm run protractor
 6.构建项目（开发人员可以不用了解）
 gulp
 
-##开发指南
+开发指南
 npm包管理
 https://www.npmjs.org/doc/cli/npm-install.html
 常用的几个有用的命令
@@ -103,16 +103,16 @@ npm install ***
 npm install *** --save
 npm install -g *** 
 
-##邮件列表指南(没空搭建)
+邮件列表指南(没空搭建)
 
-##nginx安装指南(如果喜欢用nginx作静态服务器的同学可以用)
+nginx安装指南(如果喜欢用nginx作静态服务器的同学可以用)
 sudo rpm -Uvh http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm
 sudo yum install nginx
 sudo systemctl start nginx.service
 sudo firewall-cmd --permanent --zone=public --add-service=http 
 sudo firewall-cmd --permanent --zone=public --add-service=https
 sudo firewall-cmd --reload
-# enable Nginx to start when your system boots.
+ enable Nginx to start when your system boots.
 sudo systemctl enable nginx.service
 使用参考https://www.linode.com/docs/websites/nginx/basic-nginx-configuration
 sudo ln -s /etc/nginx/sites-available/studio.conf /etc/nginx/sites-enabled/studio.conf
@@ -124,14 +124,14 @@ getenforce
 setenforce Permissive
 chcon -Rt httpd_sys_content_t /home/oswaldl/IdeaProjects
 sudo setsebool -P httpd_can_network_connect on
-# 关闭
+ 关闭
 sudo setenforce Permissive
-# 开启
+ 开启
 sudo setenforce Enforcing
 
 set user as root
 
-##新手指南FAQ
+新手指南FAQ
 1.为什么需要bower？
 这是一个js包管理神器，以后爸爸妈妈再也不担心我找不到js包了，想要jquery？直接bower install jquery即可～
 这个比较简单就提供学习指导了
@@ -158,7 +158,7 @@ https://github.com/angular-ui/ui-router（快速介紹了下）
 https://github.com/angular-ui/ui-router/wiki(更詳細內容)
 https://github.com/angular-ui/ui-router/wiki/Quick-Reference
 http://bubkoo.com/2014/01/02/angular/ui-router/guide/index/(中文版)
-http://angular-ui.github.io/ui-router/site/#/api/ui.router(看object結構的)
+http://angular-ui.github.io/ui-router/site//api/ui.router(看object結構的)
 
 angularJS学习指南
 https://docs.angularjs.org/tutorial
@@ -175,7 +175,7 @@ http://gulpjs.com/
 
 
 
-##漂亮的报表
+漂亮的报表
 http://bl.ocks.org/mbostock/1093025
 可以折叠的清单列表
 
